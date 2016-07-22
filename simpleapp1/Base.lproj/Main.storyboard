@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="simpleapp1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,60 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apj-0t-cSn">
+                                <rect key="frame" x="208" y="467" width="185" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="GU1-uS-35r"/>
+                                    <constraint firstAttribute="width" constant="185" id="R0b-G6-CfO"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="UAn-0k-bLC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" id="cwk-jL-rdT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="CHANGE TO RED">
+                                    <color key="titleColor" red="0.54117647059999996" green="0.0" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6aQ-fB-tLL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="302"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MeD-fa-lFJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="302"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugA-a1-cBG">
+                                <rect key="frame" x="208" y="392" width="185" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" id="OfA-t1-h7e"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="hCl-CQ-Spr"/>
+                                    <constraint firstAttribute="width" constant="185" id="qR8-VY-kIE"/>
+                                    <constraint firstAttribute="height" constant="29" id="yNO-Kg-v1W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="CHANGE TO BLUE">
+                                    <color key="titleColor" red="0.05683250057" green="0.1269020072" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ugA-a1-cBG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0eN-g0-YOH"/>
+                            <constraint firstItem="6aQ-fB-tLL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4eL-da-sRb"/>
+                            <constraint firstItem="6aQ-fB-tLL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Q6R-ZQ-BwW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Apj-0t-cSn" secondAttribute="bottom" constant="104" id="RQ3-o4-jR9"/>
+                            <constraint firstItem="ugA-a1-cBG" firstAttribute="top" secondItem="6aQ-fB-tLL" secondAttribute="bottom" constant="90" id="TBa-Qc-GbV"/>
+                            <constraint firstItem="ugA-a1-cBG" firstAttribute="top" secondItem="MeD-fa-lFJ" secondAttribute="bottom" constant="90" id="UcX-Qq-Ukb"/>
+                            <constraint firstItem="Apj-0t-cSn" firstAttribute="top" secondItem="ugA-a1-cBG" secondAttribute="bottom" constant="46" id="Xt5-hj-eBZ"/>
+                            <constraint firstAttribute="trailing" secondItem="MeD-fa-lFJ" secondAttribute="trailing" id="Ypl-Hh-lie"/>
+                            <constraint firstItem="MeD-fa-lFJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aHm-rB-C2j"/>
+                            <constraint firstItem="Apj-0t-cSn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="haE-OC-RjQ"/>
+                            <constraint firstAttribute="trailing" secondItem="6aQ-fB-tLL" secondAttribute="trailing" id="uC5-VW-QD4"/>
+                            <constraint firstItem="MeD-fa-lFJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z1e-KN-Cnp"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="847" y="615"/>
         </scene>
     </scenes>
 </document>
