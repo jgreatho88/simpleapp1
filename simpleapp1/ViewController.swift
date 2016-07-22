@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var blue: UIImageView!
+    
+    @IBOutlet weak var orange: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +25,16 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func blueChange(sender: AnyObject) {
+        blue.hidden = false
+        
+    }
+    
+    @IBAction func orangeChange(sender: AnyObject) {
+        orange.hidden = false
+        
+    }
+
+    
 }
 

@@ -29,6 +29,9 @@
                                 <state key="normal" title="CHANGE TO ORANGE">
                                     <color key="titleColor" red="0.93840611698157894" green="0.30872224506578949" blue="0.15223339545526313" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="orangeChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BQE-bK-EYv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugA-a1-cBG">
                                 <rect key="frame" x="208" y="392" width="185" height="29"/>
@@ -42,14 +45,17 @@
                                 <state key="normal" title="CHANGE TO BLUE">
                                     <color key="titleColor" red="0.05683250057" green="0.1269020072" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="blueChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TE4-nm-dcj"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueBg" translatesAutoresizingMaskIntoConstraints="NO" id="MeD-fa-lFJ" userLabel="BlueBg">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueBg" translatesAutoresizingMaskIntoConstraints="NO" id="MeD-fa-lFJ" userLabel="BlueBg">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="152"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="152" id="DUW-CU-LF3"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangeBg" translatesAutoresizingMaskIntoConstraints="NO" id="ThB-Pi-MmV" userLabel="OrangeBg">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangeBg" translatesAutoresizingMaskIntoConstraints="NO" id="ThB-Pi-MmV" userLabel="OrangeBg">
                                 <rect key="frame" x="0.0" y="152" width="600" height="152"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="152" id="Iju-6a-Zt1"/>
@@ -76,6 +82,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="blue" destination="MeD-fa-lFJ" id="mFI-ly-gc5"/>
+                        <outlet property="orange" destination="ThB-Pi-MmV" id="bb4-QB-e1K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
